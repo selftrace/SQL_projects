@@ -16,11 +16,3 @@ the goal here was simple: practice basic to intermediate sql concepts using real
 *   **Conditional logic:** `CASE WHEN` statements to calculate custom metrics (like attrition rate %)
 *   **Filtering & sorting:** `WHERE`, `ORDER BY`, `LIMIT`
 *   **Data exploration:** Filtering by specific attributes like marital status and business travel frequency
-
----
-
-## How to Run
-
-1. Clone this repo:
-   ```bash
-   git clone [https://github.com/selftrace/SQL.git](https://github.com/selftrace/SQL.git)
