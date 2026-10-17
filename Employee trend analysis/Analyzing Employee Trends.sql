@@ -1,9 +1,6 @@
 USE hr_data;
 
--- ============================================================
 -- 1. OVERALL HR METRICS & DASHBOARD KPIs
--- ============================================================
-
 -- high-level snapshot: total headcount, active staff, ex-staff, and overall attrition %
 SELECT 
     COUNT(*) AS total_employees,
@@ -12,11 +9,7 @@ SELECT
     ROUND(100.0 * SUM(CASE WHEN attrition = 'Yes' THEN 1 ELSE 0 END) / COUNT(*), 2) AS overall_attrition_rate
 FROM hrdata;
 
-
--- ============================================================
 -- 2. DEPARTMENT & ROLE BREAKDOWNS
--- ============================================================
-
 -- headcount and average age per department
 SELECT 
     department, 
@@ -39,11 +32,7 @@ SELECT department, job_role, role_count
 FROM RankedRoles
 WHERE rnk = 1;
 
-
--- ============================================================
 -- 3. JOB SATISFACTION INSIGHTS
--- ============================================================
-
 -- average satisfaction by education level
 SELECT 
     education, 
@@ -99,11 +88,7 @@ GROUP BY age_band
 ORDER BY average_satisfaction DESC
 LIMIT 1;
 
-
--- ============================================================
 -- 4. ATTRITION DEEP DIVES
--- ============================================================
-
 -- attrition rate by age band with actual counts
 SELECT 
     age_band, 
