@@ -121,3 +121,12 @@ SELECT
 FROM hrdata
 GROUP BY department, gender
 ORDER BY department, gender;
+
+-- UPDATED: education field mapping across departments (shows where grads end up)
+SELECT 
+    department,
+    education_field,
+    COUNT(*) AS employee_count
+FROM hrdata
+GROUP BY department, education_field
+ORDER BY department, employee_count DESC;
